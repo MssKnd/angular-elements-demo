@@ -3,10 +3,12 @@ import { NgModule, Injector } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
 
 import { AComponent } from './components/a.component';
+import { BComponent } from './components/b.component';
 
 @NgModule({
   declarations: [
-    AComponent
+    AComponent,
+    BComponent
   ],
   imports: [
     BrowserModule
@@ -19,6 +21,11 @@ export class AppModule {
       AComponent,
       { injector: this.injector }
     );
+    const BComponentElement = createCustomElement(
+      BComponent,
+      { injector: this.injector }
+    );
     customElements.define('a-component', AComponentElement);
+    customElements.define('b-component', BComponentElement);
   }
 }
