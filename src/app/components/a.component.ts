@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
 @Component({
-  template: 'Component_A',
+  template: '<span class="light">Light Component</span>',
 })
 export class AComponent {}

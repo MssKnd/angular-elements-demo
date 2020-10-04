@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  template: 'Component_B',
+  template: '<span class="shadow">Shadow Component</span>',
   encapsulation: ViewEncapsulation.ShadowDom,
 })
 export class BComponent {}

@@ -7,7 +7,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <a-component></a-component>
-  <b-component></b-component>
+  <div id="container">
+    <a-component></a-component>
+    <b-component></b-component>
+  </div>
+  <script>
+    const container = document.querySelector('#container');
+    container.addEventListener('mousemove', () => {
+      console.log('mo');
+    });
+    setTimeout(() => {
+      const light = document.querySelector('.light');
+      const shadow = document.querySelector('.shadow');
+      console.log('document.querySelector(".light"): ' + light);
+      console.log('document.querySelector(".shadow"): ' + shadow);
+    }, 2000);
+  </script>
 </body>
 </html>
