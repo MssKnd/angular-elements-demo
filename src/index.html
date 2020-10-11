@@ -7,20 +7,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+  <style>
+    div#container {
+      display: flex;
+      align-items: center;
+      height: 100px;
+      background-color: #aaa;
+      padding: 30px;
+    }
+    a-component, b-component {
+      margin: 0 auto;
+      background-color: #fff;
+    }
+  </style>
   <div id="container">
     <a-component></a-component>
     <b-component></b-component>
   </div>
   <script>
     const container = document.querySelector('#container');
-    container.addEventListener('mousemove', () => {
-      console.log('mo');
+    container.addEventListener('click', (e) => {
+      console.log('click event target: ', e.target);
     });
     setTimeout(() => {
       const light = document.querySelector('.light');
       const shadow = document.querySelector('.shadow');
-      console.log('document.querySelector(".light"): ' + light);
-      console.log('document.querySelector(".shadow"): ' + shadow);
+      console.log('document.querySelector(".light"): ', light);
+      console.log('document.querySelector(".shadow"): ', shadow);
     }, 2000);
   </script>
 </body>
